@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Montserrat:wght@300&display=swap');
+
+:root {
+	--left-clr: #99c5c8;
+	--right-clr: #343537;
+	--title-size: 18.9pt;
+	--text-size: 10.9pt;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	height: 100vh;
+	color: #fff;
+}
+
+.title {
+	font-family: 'Hammersmith One', sans-serif;
+	font-size: var(--title-size);
+	font-weight: lighter;
+}
+
+.text {
+	font-family: 'Montserrat', sans-serif;
+	font-size: var(--text-size);
+	font-weight: 300;
+	margin-top: -2px;
+}
+
+.card {
+	width: 500px;
+	height: 300px;
+	display: grid;
+	grid-template-columns: 150px 350px;
+}
+
+.left {
+	background-color: var(--left-clr);
+	display: flex;
+	align-items: center;
+}
+
+.left .image {
+	height: 140px;
+	width: 140px;
+	background-image: url(./reto_css_2.png);
+	background-size: cover;
+	background-position: right;
+	border-radius: 50%;
+	position: relative;
+	left: 75px;
+}
+
+.left .image::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	left: -10px;
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	border: 3px solid #fff;
+}
+
+.right {
+	background-color: var(--right-clr);
+	display: flex;
+	align-items: center;
+	padding-left: 100px;
+}
+
+.contact-list {
+	list-style: none;
+	margin-top: 34px;
+}
+
+.info {
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.info i {
+	margin-right: 10px;
+	color: var(--left-clr);
+}
